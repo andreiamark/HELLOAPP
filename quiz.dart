@@ -1,4 +1,4 @@
-  import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
   import './question.dart';
   import './answer.dart';
@@ -21,14 +21,14 @@
         children: [
           Question(
             questions[questionIndex]['questionText'] as String,
-          ),
+          ), //Question
           ...(questions[questionIndex]['answers'] as List<Map<String, Object>>)
               .map((answer) {
             return Answer(() => answerQuestion(
                 answer['score']),
-                answer['text']);
+                answer['text']);  //Answer
           }).toList()
         ],
-      );
+      ); //Column
     }
   }
