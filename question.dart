@@ -1,21 +1,22 @@
 import 'package:flutter/material.dart';
 
-class Answer extends StatelessWidget {
-  final selectHandler;
-  final answerText;
+import 'package:flutter/material.dart';
 
-  Answer(this.selectHandler, this.answerText);
+class Question  extends StatelessWidget {
+  String questionText;
+
+  Question(this.questionText);
+
 
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return Container(
-      width: double.infinity,
-      child: RaisedButton(
-        color:Colors.pink,
-        textColor: Colors.white,
-        child:Text(answerText),
-        onPressed: selectHandler,
-      ),
-    );
+        width: double.infinity,
+        margin: EdgeInsets.all(10),
+        child:Text(
+          questionText,
+          style: TextStyle(fontSize: 28),
+          textAlign: TextAlign.center,
+        )); //Text, Container
   }
 }
